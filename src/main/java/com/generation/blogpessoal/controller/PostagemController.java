@@ -12,9 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.generation.blogpessoal.model.Postagem;
 import com.generation.blogpessoal.repository.PostagemRepository;
 
-@RestController
+// Anotações: alterar e/ou definir comportamentos
+@RestController // Indica que é uma classe Controller
 @RequestMapping("/postagens")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "http://", allowedHeaders = "*")
 public class PostagemController {
 	
 	@Autowired
