@@ -6,10 +6,10 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>4.0.6</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<version>3.5.14</version>
+		<relativePath />
 	</parent>
-	<groupId>com.example</groupId>
+	<groupId>com.generation</groupId>
 	<artifactId>blogpessoal</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>blogpessoal</name>
@@ -28,9 +28,9 @@
 		<url />
 	</scm>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>21</java.version>	
 	</properties>
-	<dependencies>
+	<dependencies> 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -41,7 +41,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-webmvc</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>
@@ -54,19 +54,16 @@
 			<artifactId>jjwt-api</artifactId>
 			<version>0.12.6</version>
 		</dependency>
-		
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt-impl</artifactId>
 			<version>0.12.6</version>
 		</dependency>
-		
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt-jackson</artifactId>
 			<version>0.12.6</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -78,20 +75,32 @@
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa-test</artifactId>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-validation-test</artifactId>
+			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.mockito</groupId>
+					<artifactId>mockito-core</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
+		
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-webmvc-test</artifactId>
-			<scope>test</scope>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.8.9</version>
 		</dependency>
 	</dependencies>
 
