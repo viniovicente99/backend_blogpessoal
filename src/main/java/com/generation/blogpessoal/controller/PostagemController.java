@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -24,12 +25,11 @@ import com.generation.blogpessoal.repository.TemaRepository;
 
 import jakarta.validation.Valid;
 
-// Anotações: alterar e/ou definir comportamentos
-@RestController // Indica que é uma classe Controller
+@RestController
 @RequestMapping("/postagens")
-@CrossOrigin(origins = "http://", allowedHeaders = "*")
+@CrossOrigin(origins = "${frontend_url}", allowedHeaders = "*")
 public class PostagemController {
-
+	
 	@Autowired
 	private PostagemRepository postagemRepository;
 
